@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEFCON-CORE Terminal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="monitor">
+    <div class="bezel-top">
+      <span class="brand">DEFCON-CORE TERMINAL v3.7</span>
+      <div class="leds">
+        <span class="led power" title="power"></span>
+        <span class="led data" title="data"></span>
+        <span class="led alert" title="alert"></span>
+      </div>
+    </div>
+
+    <div class="screen" id="screen">
+      <div class="scanlines"></div>
+      <div class="flicker"></div>
+      <div class="crt-content">
+        <header class="hud">
+          <span class="hud-item">DEFCON: <b id="defcon">3</b></span>
+          <span class="hud-item">SCORE: <b id="score">0</b></span>
+          <span class="hud-item">SILOS: <b id="silos">3 LOCKED</b></span>
+        </header>
+        <div id="history" class="history"></div>
+        <div class="input-line">
+          <span class="prompt">DEFCON:~$</span>
+          <input id="cmd" type="text" size="1" autocomplete="off" spellcheck="false" autofocus />
+          <span class="cursor">_</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bezel-bottom">
+      <div class="buttons">
+        <button class="bezel-btn" data-cmd="help">HELP</button>
+        <button class="bezel-btn" data-cmd="status">STATUS</button>
+        <button class="bezel-btn" data-cmd="read">READ</button>
+        <button class="bezel-btn" data-cmd="clear">CLEAR</button>
+      </div>
+      <div class="power-switch"></div>
+    </div>
+  </div>
+
+  <audio id="snd-beep" src="beep.mp3" preload="auto"></audio>
+  <audio id="snd-correct" src="correct.mp3" preload="auto"></audio>
+  <audio id="snd-error" src="error.mp3" preload="auto"></audio>
+  <audio id="snd-victory" src="victory.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
