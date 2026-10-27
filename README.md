@@ -94,11 +94,6 @@ browsermissilepuzzle/
 
 Just open `index.html` in your browser. That's it.
 
-```bash
-# or serve it (optional)
-python -m http.server 8000
-```
-
 ---
 
 ## 📝 License
