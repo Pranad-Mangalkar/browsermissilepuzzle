@@ -53,10 +53,6 @@
 Each correct answer unlocks a fragment: `TITAN` · `SILO4` · `ABORT`.  
 Final command: `override TITAN-SILO4-ABORT`
 
-### 🥚 Easter Egg
-
-Type `wargames` or `nuke` for a classic response and **+50 bonus points**.
-
 ---
 
 ## 🔊 Audio Setup (Optional)
