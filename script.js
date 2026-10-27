@@ -196,6 +196,19 @@ function processCommand(raw) {
   const cmdName = parts[0].toLowerCase();
   const args = parts.slice(1).join(' ');
 
+  // Easter egg
+  if (cmdName === 'wargames' || cmdName === 'nuke') {
+    if (!state.easterClaimed) {
+      state.easterClaimed = true;
+      state.score += 50;
+      updateHUD();
+      appendLine('GREETINGS, PROFESSOR FALKEN. A STRANGE GAME. THE ONLY WINNING MOVE IS NOT TO PLAY.', 'ok');
+    } else {
+      appendLine('Easter egg already claimed.', 'info');
+    }
+    playSound('correct');
+    return;
+  }
 
   if (Object.prototype.hasOwnProperty.call(COMMANDS, cmdName)) {
     COMMANDS[cmdName](args);
